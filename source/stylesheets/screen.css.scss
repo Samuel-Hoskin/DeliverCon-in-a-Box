@@ -1,0 +1,25 @@
+@import "govuk_tech_docs";
+
+.govuk-header__product-name::before {
+    content: "DeliverCon ";
+    font-weight: 600;
+    background-image:
+        url("https://www.svgrepo.com/download/1320/rocket.svg") !important;
+    padding: 8px 0px 10px 55px;
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: -5px;
+
+    @media (max-width: 40.0625em) {
+        padding: 4px 0px 5px 45px;
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: -5px;
+    }
+}
+
+footer {
+    display: none
+}
