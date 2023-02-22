@@ -46,8 +46,8 @@ jobs:
       - name: Build Middleman
         run: bundle exec middleman build
 
-      - name: Deploy to Github Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Commit back updated files to public branch
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          repository: public
+          commit_message: Updating page
