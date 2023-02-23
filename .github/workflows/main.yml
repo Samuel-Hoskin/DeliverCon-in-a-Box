@@ -11,6 +11,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          path: main
+          
+      - uses: actions/checkout@v2
+        with:
+          ref: public
+          path: public
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
