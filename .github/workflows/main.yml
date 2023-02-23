@@ -14,10 +14,7 @@ jobs:
         with:
           path: main
           
-      - uses: actions/checkout@v2
-        with:
-          ref: public
-          path: public
+
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -52,6 +49,11 @@ jobs:
 
       - name: Build Middleman
         run: bundle exec middleman build
+        
+      - uses: actions/checkout@v2
+        with:
+          ref: public
+          path: public
 
       - name: Commit back updated files to public branch
         uses: stefanzweifel/git-auto-commit-action@v4
